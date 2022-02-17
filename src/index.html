@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AirLines</title>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/external-victoruler-linear-colour-victoruler/128/000000/external-airplane-logistics-victoruler-linear-colour-victoruler.png"
+      type="image/png"
+    />
+    <script
+      src="https://kit.fontawesome.com/c127a53f67.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="main">
+      <aside class="filter">
+        <div>
+          <div id="sort-flights">
+            <p class="font-bold">Сортировать</p>
+            <div>
+              <input type="radio" data-type="asc" name="sort" checked />
+              <span>- по возрастанию цены</span>
+            </div>
+            <div>
+              <input type="radio" data-type="desc" name="sort" />
+              <span>- по убыванию цены</span>
+            </div>
+            <div>
+              <input type="radio" data-type="duration" name="sort" />
+              <span>- по времени в пути</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="change-filter">
+            <p class="font-bold">Фильтровать</p>
+            <div>
+              <input type="checkbox" data-type="1" checked />
+              <span>- 1 пересадка</span>
+            </div>
+            <div>
+              <input type="checkbox" data-type="0" checked />
+              <span>- без пересадок</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="price-filter">
+            <p class="font-bold">Цена</p>
+            <div>
+              <span>От</span>
+              <input
+                id="price-from"
+                type="number"
+                min="0"
+                placeholder="enter price"
+              />
+            </div>
+            <div>
+              <span>До</span>
+              <input
+                id="price-to"
+                type="number"
+                name="name1"
+                min="0"
+                placeholder="enter price"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p class="font-bold">Авиакомпании</p>
+            <ul id="airlines-list" class="airlines-list"></ul>
+          </div>
+        </div>
+      </aside>
+      <ul id="flights-list" class="flights"></ul>
+    </main>
+  </body>
+</html>

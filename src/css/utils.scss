@@ -1,0 +1,32 @@
+$main-color: #0087c9;
+$btn-color: #ff9932;
+$white-color: #fff;
+$filter-width: 30%;
+$dest-color: #a2a2a2;
+
+.font-bold {
+  font-weight: bold;
+}
+.font-1_2rem {
+  font-size: 1.2rem;
+}
+
+.font-1rem {
+  font-size: 1rem;
+}
+
+.font-0_8rem {
+  font-size: 0.8rem;
+}
+
+.orange-color {
+  color: $btn-color;
+}
+
+.white-color {
+  color: $white-color;
+}
+
+.main-color {
+  color: $main-color;
+}
