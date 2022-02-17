@@ -55,3 +55,10 @@ export type FlightsSchedule = {
     flights: Record<string, Flight>[];
   };
 };
+
+export type Filter = {
+  sort: string;
+  change: number[];
+  price: number[];
+  airlines: string[];
+};

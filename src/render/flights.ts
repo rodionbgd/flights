@@ -1,4 +1,5 @@
 import { store } from "../index";
+import { filterFlights } from "../filter/filter";
 
 const formatter = new Intl.DateTimeFormat("ru-RU", {
   weekday: "short",
@@ -14,10 +15,11 @@ function renderDate(date: Date) {
 }
 
 export function renderFlights(el: HTMLUListElement) {
-  const { flights } = store.getState();
+  const { filter, flights } = store.getState();
+  let filteredFlights = filterFlights(filter, flights);
   let innerHTML = "";
 
-  flights.forEach((flightWrapper) => {
+  filteredFlights.forEach((flightWrapper) => {
     const { flight } = flightWrapper;
     const { price, legs } = flight;
     innerHTML += `

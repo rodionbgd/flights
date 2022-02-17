@@ -13,7 +13,7 @@
 
 html,
 body {
-  max-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -29,6 +29,7 @@ ul {
 
 .main {
   width: 1080px;
+  height: 100%;
   margin: 1rem auto;
   background-color: $white-color;
   padding: 1rem;
@@ -38,12 +39,13 @@ ul {
 
 .filter {
   width: $filter-width;
-  border-right: 1px solid rgba(11, 11, 254, 0.2);
   font-size: 0.9rem;
 }
 
 .flights {
   width: 100% - $filter-width;
+  height: 100%;
+  overflow-y: scroll;
   &__item-wrapper {
     width: 100%;
     display: flex;

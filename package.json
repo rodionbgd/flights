@@ -1,16 +1,17 @@
 {
   "name": "flights",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Airlines",
   "scripts": {
     "test": "jest --coverage",
     "test:badges": "npm run test  && jest-coverage-badges output \"./badges\"",
     "lint": "eslint src && prettier --check src",
-    "lint:fix": "eslint --fix src && prettier --write src",
+    "lint:fix": "prettier --write src && eslint --fix src",
     "ci": "npm test && npm run lint:fix",
     "prepare": "husky install",
     "dev": "webpack serve --node-env development",
-    "build": "webpack --node-env production"
+    "build": "webpack --node-env production",
+    "version": "auto-changelog  --tag-pattern .+ --hide-credit && git add CHANGELOG.md && git commit -am \"chore: Changelog update\" && git push origin"
   },
   "husky": {
     "hooks": {
@@ -44,6 +45,7 @@
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
+    "auto-changelog": "^2.4.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0",
